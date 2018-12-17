@@ -1,23 +1,16 @@
 {
-  "name": "reveal.js",
-  "version": "3.7.0",
-  "description": "The HTML Presentation Framework",
-  "homepage": "http://revealjs.com",
-  "subdomain": "revealjs",
-  "main": "js/reveal.js",
+  "name": "web-workshop",
+  "version": "0.0.1",
+  "description": "HTML/CSS Workshop",
   "scripts": {
     "test": "grunt test",
     "start": "grunt serve",
     "build": "grunt"
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "name": "Oganisyan Vrezh",
+    "email": "hovanisyan.vrezh@gmail.com",
+    "web": "vre2h.github.io"
   },
   "engines": {
     "node": ">=4.0.0"

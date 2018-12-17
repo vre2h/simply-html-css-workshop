@@ -1,49 +1,292 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>HTML/CSS Workshop</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/moon.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
+    <style>
+      .mark {
+        display: inline-block;
+        width: 100%;
+        background-color: rgba(204, 204, 204, 0.3);
+      }
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+      .comments {
+        color: #ddd;
+      }
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+      .comments::before {
+        content: '    <!-- or -->';
+        color: #ddd;
+      }
+    </style>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>HTML / CSS</h1>
+          <p>Oganisyan Vrezh</p>
+        </section>
+        <section>
+            <h1>@vre2h</h1>
+            <p><a href="https://t.me/vre2h">Telegram</a></p>
+            <p><a href="https://facebook.com/vre2h">Facebook</a></p>
+            <p><a href="https://vk.com/vre2h">VK</a></p>
+            <p><a href="https://github.com/vre2h">Github</a></p>
+        </section>
+        <section>
+            <h1>Workshop</h1>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Bootstrap</li>
+              <li>Homework</li>
+            </ul>
+        </section>
+        <section>
+          <section>
+              <h3>Basic Markup</h3>
+              <pre><code data-trim data-noescape>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                      &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport"
+                              content="width=device-width,initial-scale=1.0"&gt;
+                        &lt;title&gt;Game of Thrones&lt;/title&gt;
+                        &lt;meta name="keywords" content="winter, khaleesi, stark"&gt;
+                      &lt;/head&gt;
+                      &lt;body&gt;
+                      &lt;/body&gt;
+                    &lt;/html&gt;
+                </code></pre>
+          </section>
+          <section>
+            <h3>Doctype</h3>
+            <pre><code data-trim data-noescape>
+                  <span class="mark">&lt;!DOCTYPE html&gt;</span>
+                  &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                      &lt;meta charset="UTF-8"&gt;
+                      &lt;meta name="viewport"
+                            content="width=device-width,initial-scale=1.0"&gt;
+                      &lt;title&gt;Game of Thrones&lt;/title&gt;
+                      &lt;meta name="keywords" content="winter, khaleesi, stark"&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;/body&gt;
+                  &lt;/html&gt;
+              </code></pre>
+          </section>
+          <section>
+            <ul>
+              <h2>HTML v4 vs v5</h2>
+              <br />
+              <ul>
+                <li>Video</li>
+                <li>Geolocation</li>
+                <li>Canvas</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h3>Language</h3>
+            <pre><code data-trim data-noescape>
+                &lt;!DOCTYPE html&gt;
+                <span class="mark">&lt;html lang="en"&gt;</span>
+                  &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport"
+                          content="width=device-width,initial-scale=1.0"&gt;
+                    &lt;title&gt;Game of Thrones&lt;/title&gt;
+                    &lt;meta name="keywords" content="winter, khaleesi, stark"&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                  &lt;/body&gt;
+                &lt;/html&gt;
+        </code></pre>
+          </section>
+          <section>
+              <h3>Head</h3>
+              <pre><code data-trim data-noescape>
+                  &lt;!DOCTYPE html&gt;
+                  &lt;html lang="en"&gt;
+                    <span class="mark">&lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport"
+                          content="width=device-width,initial-scale=1.0"&gt;
+                    &lt;title&gt;Game of Thrones&lt;/title&gt;
+                    &lt;meta name="keywords" content="winter, khaleesi, stark"&gt;
+                  &lt;/head&gt;</span>
+                    &lt;body&gt;
+                    &lt;/body&gt;
+                  &lt;/html&gt;
+          </code></pre>
+            </section>
+          <section>
+              <h3>Encoding</h3>
+              <pre><code data-trim data-noescape>
+                  &lt;!DOCTYPE html&gt;
+                  &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                      <span class="mark">&lt;meta charset="UTF-8"&gt;</span>
+                      &lt;meta name="viewport"
+                              content="width=device-width,initial-scale=1.0"&gt;
+                      &lt;title&gt;Game of Thrones&lt;/title&gt;
+                      &lt;meta name="keywords" content="winter, khaleesi, stark"&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;/body&gt;
+                  &lt;/html&gt;
+          </code></pre>
+            </section>
+          <section>
+              <h3>Title and some meta-tags</h3>
+              <pre><code data-trim data-noescape>
+                  &lt;!DOCTYPE html&gt;
+                  &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                      &lt;meta charset="UTF-8"&gt;
+                      &lt;meta name="viewport"
+                            content="width=device-width,initial-scale=1.0"&gt;
+                      <span class="mark">&lt;title&gt;Game of Thrones&lt;/title&gt;
+                &lt;meta name="keywords" content="winter, khaleesi, stark"&gt;
+                &lt;meta name="description" content="Game of Thrones is an American fantasy drama television series created by David Benioff and D. B. Weiss."&gt;
+                </span>
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;/body&gt;
+                  &lt;/html&gt;
+          </code></pre>
+          </section>
+          <section>
+              <h3>Viewport</h3>
+              <pre><code data-trim data-noescape>
+                  &lt;!DOCTYPE html&gt;
+                  &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                      &lt;meta charset="UTF-8"&gt;
+                      <span class="mark">&lt;meta name="viewport"
+                        content="width=device-width,initial-scale=1.0"&gt;</span>
+                      &lt;title&gt;Game of Thrones&lt;/title&gt;
+                      &lt;meta name="keywords" content="winter, khaleesi, stark"&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;/body&gt;
+                  &lt;/html&gt;
+          </code></pre>
+          <a href="https://www.w3schools.com/tags/tag_meta.asp" target="_blank">Example</a>
+          </section>
+          <section>
+            <h3>CSS styles</h3>
+            <pre><code data-trim data-noescape>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                  &lt;head&gt;
+                    ...
+                    &lt;style&gt;
+                      css-code
+                    &lt;/style&gt;
+                    <div class="mark"><div class="comments"></div></div>
+                    &lt;link href="external.css" rel="stylesheet"&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                  &lt;/body&gt;
+                &lt;/html&gt;
+        </code></pre>
+          </section>
+          <section>
+              <h3>JS scripts</h3>
+              <pre><code data-trim data-noescape>
+                  &lt;!DOCTYPE html&gt;
+                  &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                      ...
+                      &lt;script&gt;
+                        JS-code
+                      &lt;/script&gt;
+                      <div class="mark"><div class="comments"></div></div>
+                      &lt;script src="external.js"&gt;&lt;script/&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;/body&gt;
+                  &lt;/html&gt;
+          </code></pre>
+            </section>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+        </section>
+      </section>
+        <section>
+          <a href="https://codepen.io/Vrezh/pen/jXrqgN" target="_blank"
+            >Text Layout</a
+          >
+        </section>
+        <section>
+          <a href="https://codepen.io/Vrezh/pen/LMZxaX" target="_blank"
+            >Links and Images</a
+          >
+        </section>
+        <section>
+            <a href="https://codepen.io/Vrezh/pen/ZVOLae" target="_blank"
+              >Forms</a>
+        </section>
+        <section>
+            <a href="https://codepen.io/enxaneta/full/adLPwv" target="_blank"
+              >FlexBox Playground</a>
+        </section>
+        <section>
+          <h2>Homework</h2>
+          <ul>
+            <li><a href="">HTML tags</a></li>
+            <li><a href="">CSS rules</a></li>
+            <li><a href="">Sources</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
 </html>
